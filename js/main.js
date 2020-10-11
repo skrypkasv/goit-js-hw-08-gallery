@@ -75,7 +75,6 @@ function closeModal() {
 const modalBackdrop = document.querySelector('div.lightbox__overlay');
 modalBackdrop.addEventListener('click', closeModal);
 
-
 // ▶ Закрытие модального окна по нажатию клавиши ESC.
 function onEscKeydown(evt) {
   if (evt.code === 'Escape') {
@@ -84,14 +83,6 @@ function onEscKeydown(evt) {
 }
 // ▶ Пролистывание изображений галереи в открытом
 // модальном окне клавишами "влево" и "вправо".
-// function goToNxtPrevImg(evt) {
-//   if (evt.code === 'ArrowRight') {
-//     console.log('next');
-//   }
-//   if (evt.code === 'ArrowLeft') {
-//     console.log('previous')
-//   }
-// }
 
 
 /*Ссылка на оригинальное изображение должна храниться
