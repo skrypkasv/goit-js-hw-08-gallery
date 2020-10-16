@@ -7,7 +7,7 @@ const markup = createGalleryMarkup(data);
 gallery.insertAdjacentHTML('beforeend', markup);
 
 function createGalleryMarkup(listItems) {
-  return listItems.map(({ preview, original, description }, indx) => {
+  return listItems.map(({ preview, original, description }) => {
     return `<li class="gallery__item">
               <a
                 class="gallery__link"
@@ -17,7 +17,6 @@ function createGalleryMarkup(listItems) {
                   class="gallery__image"
                   src="${preview}"
                   data-source="${original}"
-                  data-index="${indx}"
                   alt="${description}"
                 />
               </a>
@@ -44,6 +43,7 @@ function openModal(evt) {
   changeModalImgAttributes(evt);
 
   window.addEventListener('keydown', onEscKeydown)
+  window.addEventListener('keydown', onArrowsKeydown)
 }
 function changeModalImgAttributes(evt) {
   modalImg.src = evt.target.dataset.source;
@@ -61,6 +61,7 @@ btnCloseModal.addEventListener('click', closeModal);
 
 function closeModal() {
   window.removeEventListener('keydown', onEscKeydown)
+  window.removeEventListener('keydown', onArrowsKeydown)
   modal.classList.remove('is-open');
   modalImg.src = '';
 }
@@ -83,6 +84,37 @@ function onEscKeydown(evt) {
 }
 // ▶ Пролистывание изображений галереи в открытом
 // модальном окне клавишами "влево" и "вправо".
+const originLinks = data.map(({ original }) => original);
+
+function onArrowsKeydown(evt) {
+  if (evt.code === "ArrowRight") {
+    onArrowRightKeydown()
+  } else if (evt.code === "ArrowLeft") {
+    onArrowLeftKeydown()
+  }
+}
+function onArrowRightKeydown() {
+  for (let i = 0; i < originLinks.length; i += 1) {
+      if (modalImg.src === originLinks[8]) {
+        modalImg.src = `${originLinks[0]}`;
+        return;
+      } else if (modalImg.src === originLinks[i]) {
+        modalImg.src = `${originLinks[i + 1]}`;
+        return;
+      }
+    }
+}
+function onArrowLeftKeydown() {
+  for (let i = 0; i < originLinks.length; i += 1) {
+      if (modalImg.src === originLinks[0]) {
+        modalImg.src = `${originLinks[8]}`;
+        return;
+      } else if (modalImg.src === originLinks[i]) {
+        modalImg.src = `${originLinks[i - 1]}`;
+        return;
+      }
+    }
+}
 
 
 /*Ссылка на оригинальное изображение должна храниться
