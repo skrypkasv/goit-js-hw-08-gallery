@@ -1,0 +1,26 @@
+{
+  "name": "goit-js-hw-08-gallery",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/skrypkasv/goit-js-hw-08-gallery.git"
+  },
+  "keywords": [],
+  "author": "<skrypkasv@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/skrypkasv/goit-js-hw-08-gallery/issues"
+  },
+  "homepage": "https://github.com/skrypkasv/goit-js-hw-08-gallery#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.27.0"
+  }
+}
