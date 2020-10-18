@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/skrypkasv/goit-js-hw-08-gallery/issues"
   },
-  "homepage": "https://skrypkasv.github.io/goit-js-hw-08-gallery",
+  "homepage": "https://skrypkasv.github.io/goit-js-hw-08-gallery/",
   "dependencies": {
     "gh-pages": "^3.1.0"
   },

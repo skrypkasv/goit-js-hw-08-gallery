@@ -62,4 +62,20 @@ export default [
       'https://cdn.pixabay.com/photo/2019/05/17/04/35/lighthouse-4208843_1280.jpg',
     description: 'Lighthouse Coast Sea',
   },
+  {
+    preview: 'https://cdn.pixabay.com/photo/2020/10/12/22/12/color-pop-5650322__340.jpg',
+    original: 'https://cdn.pixabay.com/photo/2020/10/12/22/12/color-pop-5650322_1280.jpg',
+    description: 'Red fish',
+  },
+  {
+    preview: 'https://cdn.pixabay.com/photo/2020/09/14/17/19/beach-5571545__340.jpg',
+    original: 'https://cdn.pixabay.com/photo/2020/09/14/17/19/beach-5571545_1280.jpg',
+    description: 'Couple on the beach',
+  },
+  {
+    preview: 'https://cdn.pixabay.com/photo/2020/04/13/16/39/flash-5039182__340.jpg',
+    original: 'https://cdn.pixabay.com/photo/2020/04/13/16/39/flash-5039182_1280.jpg',
+    description: 'Flash of lightning',
+  },
+  
 ];
